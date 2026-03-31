@@ -8,6 +8,8 @@ const User = require("./models/User"); // ✅ ADD THIS
 
 const app = express();
 
+console.log("hello test");
+
 app.use(cors());
 app.use(express.json());
 
