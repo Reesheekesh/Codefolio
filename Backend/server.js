@@ -22,3 +22,8 @@ app.get("/", (req, res) => {
 app.listen(5000, () => {
     console.log("Server running on port 5000");
 });
+
+app.get("/api/user/:username", async (req, res) => {
+  const user = await User.findOne({ username: req.params.username });
+  res.json(user);
+});
